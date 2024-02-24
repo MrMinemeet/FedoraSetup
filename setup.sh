@@ -27,10 +27,30 @@ dnf_packages="
 	micro
 	mpv
 	mupdf
+	neofetch
 	nmap
 	python3-pip
 	rclone
 	steam
+"
+
+# DNF-Package to remove (includes Gnome and KDE Plasma stuff)
+dnf_remove_packages="
+	cheese
+	gnome-boxes
+	gnome-contacts
+	gnome-maps
+	gnome-tour
+	gnome-weather
+	elisa-player
+	libreoffice-*
+	kamaso
+	kmail
+	kolourpaint
+	rhythmbox
+	simple-scan
+	totem
+	yelp
 "
 
 # Flatpak-Pakages
@@ -64,6 +84,9 @@ dnf config-manager --disable google-chrome
 sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
 dnf copr disable phracek/PyCharm
 
+# Remove unwanted packages
+dnf remove -y $dnf_remove_packages
+
 # Upgrade currently installed packages
 dnf upgrade --refresh -y
 
@@ -75,3 +98,6 @@ flatpak install -y $flatpak_packages
 
 # Install official 7zip binary
 curl https://raw.githubusercontent.com/MrMinemeet/Install7zz/main/install.sh | sudo bash
+
+# Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
