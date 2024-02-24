@@ -101,3 +101,15 @@ curl https://raw.githubusercontent.com/MrMinemeet/Install7zz/main/install.sh | s
 
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# Install JetBrains Toolbox
+wget -O - "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA" | tar -xz -C /tmp/
+/tmp/jetbrains*/jetbrains-toolbox
+rm -r /tmp/jetbrains*
+
+# Install Rust Toolchain via RustUp
+wget -qO- https://sh.rustup.rs | sh -s -- -y
+
+
+# Get updated .bashrc
+source "$HOME/.cargo/env"
