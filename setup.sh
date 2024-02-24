@@ -111,8 +111,8 @@ rm -r /tmp/jetbrains*
 wget -qO- https://sh.rustup.rs | sh -s -- -y
 
 
-# Get updated .bashrc
-source "$HOME/.cargo/env"
+# Get updated bash data
+source "$HOME/.bashrc"
 
 # Install NodeJS LTS
 nvm install --lts
