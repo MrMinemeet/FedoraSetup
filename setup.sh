@@ -65,6 +65,13 @@ flatpak_packages="
 	com.github.Eloston.UngoogledChromium
 "
 
+# Alias
+alias="
+	alias dur='sudo dnf upgrade --refresh -y && flatpak upgrade -y && flatpak remove --unused'\n
+	alias mergepdf='mutool merge ./*.pdf'\n
+	alias compresspdf='gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf'\n
+"
+
 # Enable Flathub repository
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
@@ -110,9 +117,11 @@ rm -r /tmp/jetbrains*
 # Install Rust Toolchain via RustUp
 wget -qO- https://sh.rustup.rs | sh -s -- -y
 
+# Add alias to .bashrc
+echo $alias >> "/home/$SUDO_USER/.bashrc"
 
-# Get updated bash data
-source "$HOME/.bashrc"
+# Get updated .bashrc
+source "/home/$SUDO_USER/.bashrc"
 
 # Install NodeJS LTS
 nvm install --lts
