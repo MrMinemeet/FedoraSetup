@@ -67,6 +67,7 @@ flatpak_packages="
 
 # Alias
 alias="
+	# Custom Alias\n
 	alias dur='sudo dnf upgrade --refresh -y && flatpak upgrade -y && flatpak remove --unused'\n
 	alias mergepdf='mutool merge ./*.pdf'\n
 	alias compresspdf='gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf'\n
@@ -141,7 +142,7 @@ sudo -u $SUDO_USER bash -c 'wget -qO- https://sh.rustup.rs | sh -s -- -y'
 check_error
 
 # Add alias to .bashrc
-echo $alias >> "/home/$SUDO_USER/.bashrc"
+echo -e $alias >> "/home/$SUDO_USER/.bashrc"
 
 # Info for user
 echo ""
