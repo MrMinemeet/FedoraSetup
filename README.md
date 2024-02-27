@@ -64,3 +64,9 @@ Script for installing and configuring a new Fedora install to my likings.
 ## Alias:
 * `dur` - `sudo dnf upgrade --refresh -y && flatpak upgrade -y && flatpak remove --unused`
 * `mergepdf` - `mutool merge ./*.pdf`
+
+## Configurations:
+* Install `rpmfusion` repositories and additionally enable `rpmfusion-free-steam`
+* Disable `google-chrome` repository
+* Disable `phracek/PyCharm` COPR repository
+* Add `flathub.org` repository in addition to the default Fedora flatpak repository
