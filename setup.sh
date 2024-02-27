@@ -107,7 +107,7 @@ flatpak install -y $flatpak_packages
 curl https://raw.githubusercontent.com/MrMinemeet/Install7zz/main/install.sh | sudo bash
 
 # Install NVM
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+sudo -u $SUDO_USER bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
 
 # Install JetBrains Toolbox
 wget -O - "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA" | tar -xz -C /tmp/
@@ -115,7 +115,7 @@ wget -O - "https://data.services.jetbrains.com/products/download?platform=linux&
 rm -r /tmp/jetbrains*
 
 # Install Rust Toolchain via RustUp
-wget -qO- https://sh.rustup.rs | sh -s -- -y
+sudo -u $SUDO_USER bash -c 'wget -qO- https://sh.rustup.rs | sh -s -- -y'
 
 # Add alias to .bashrc
 echo $alias >> "/home/$SUDO_USER/.bashrc"
