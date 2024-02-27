@@ -60,3 +60,7 @@ Script for installing and configuring a new Fedora install to my likings.
 * simple-scan
 * totem
 * yelp
+
+## Alias:
+* `dur` - `sudo dnf upgrade --refresh -y && flatpak upgrade -y && flatpak remove --unused`
+* `mergepdf` - `mutool merge ./*.pdf`

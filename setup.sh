@@ -72,7 +72,6 @@ alias="
 	# Custom Alias\n
 	alias dur='sudo dnf upgrade --refresh -y && flatpak upgrade -y && flatpak remove --unused'\n
 	alias mergepdf='mutool merge ./*.pdf'\n
-	alias compresspdf='gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf'\n
 "
 
 exited_with_errors=false
