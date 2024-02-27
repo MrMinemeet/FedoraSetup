@@ -21,6 +21,7 @@ dnf_packages="
 	dotnet-sdk-8.0
 	gcc
 	gh
+	git
 	java-latest-openjdk
 	kdenlive
 	krita
@@ -29,6 +30,7 @@ dnf_packages="
 	mupdf
 	neofetch
 	nmap
+	obs-studio
 	python3-pip
 	rclone
 	steam
