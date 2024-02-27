@@ -122,6 +122,3 @@ echo $alias >> "/home/$SUDO_USER/.bashrc"
 
 # Get updated .bashrc
 source "/home/$SUDO_USER/.bashrc"
-
-# Install NodeJS LTS
-nvm install --lts
