@@ -38,6 +38,7 @@ dnf_packages="
 
 # DNF-Package to remove (includes Gnome and KDE Plasma stuff)
 dnf_remove_packages="
+	akregator
 	cheese
 	gnome-boxes
 	gnome-contacts

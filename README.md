@@ -46,6 +46,7 @@ Script for installing and configuring a new Fedora install to my likings.
 * [RustUp](https://rustup.rs/) - (official install script)
 
 ## Packages removed:
+* akregator
 * cheese
 * gnome-boxes
 * gnome-contacts
