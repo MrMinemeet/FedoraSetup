@@ -96,7 +96,6 @@ check_error
 
 # Configure DNF
 echo "max_parallel_downloads=20" >> /etc/dnf/dnf.conf
-echo "fastestmirror=True" >> /etc/dnf/dnf.conf
 
 # Install DNF mirrors
 dnf install -y $dnf_mirrors
