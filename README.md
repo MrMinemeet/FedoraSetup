@@ -22,6 +22,7 @@ Script for installing and configuring a new Fedora install to my likings.
 * [micro](https://micro-editor.github.io/)
 * [mpv](https://mpv.io/)
 * [mupdf](https://mupdf.com/)
+* [ncdu](https://dev.yorhel.nl/ncdu)
 * [neofetch](https://github.com/dylanaraps/neofetch)
 * [nmap](https://nmap.org/)
 * [obs-studio](https://obsproject.com/)

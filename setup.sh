@@ -28,6 +28,7 @@ dnf_packages="
 	micro
 	mpv
 	mupdf
+	ncdu
 	neofetch
 	nmap
 	obs-studio
