@@ -56,7 +56,10 @@ Script for installing and configuring a new Fedora install to my likings.
 * elisa-player
 * libreoffice (everything of it)
 * kamaso
+* kmahjongg
+* kmines
 * kmail
+* kpat
 * rhythmbox
 * simple-scan
 * totem

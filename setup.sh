@@ -48,7 +48,10 @@ dnf_remove_packages="
 	elisa-player
 	libreoffice-*
 	kamaso
+	kmahjongg
+	kmines
 	kmail
+	kpat
 	kolourpaint
 	rhythmbox
 	simple-scan
