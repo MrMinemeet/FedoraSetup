@@ -40,6 +40,7 @@ dnf_packages="
 dnf_remove_packages="
 	akregator
 	cheese
+	dragon
 	gnome-boxes
 	gnome-contacts
 	gnome-maps
@@ -47,12 +48,15 @@ dnf_remove_packages="
 	gnome-weather
 	elisa-player
 	libreoffice-*
+	kaddressbook
 	kamaso
 	kmahjongg
 	kmines
 	kmail
 	kpat
 	kolourpaint
+	konversation
+	korganizer
 	rhythmbox
 	simple-scan
 	totem

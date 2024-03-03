@@ -48,6 +48,7 @@ Script for installing and configuring a new Fedora install to my likings.
 ## Packages removed:
 * akregator
 * cheese
+* dragon
 * gnome-boxes
 * gnome-contacts
 * gnome-maps
@@ -55,11 +56,15 @@ Script for installing and configuring a new Fedora install to my likings.
 * gnome-weather
 * elisa-player
 * libreoffice (everything of it)
+* kaddressbook
 * kamaso
 * kmahjongg
 * kmines
 * kmail
 * kpat
+* kolourpaint
+* konversation
+* korganizer
 * rhythmbox
 * simple-scan
 * totem
