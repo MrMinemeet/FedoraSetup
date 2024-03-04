@@ -26,6 +26,7 @@ Script for installing and configuring a new Fedora install to my likings.
 * [neofetch](https://github.com/dylanaraps/neofetch)
 * [nmap](https://nmap.org/)
 * [obs-studio](https://obsproject.com/)
+* [powertop](https://01.org/powertop)
 * [python3-pip](https://pip.pypa.io/)
 * [rclone](https://rclone.org/)
 * [steam](https://steampowered.com/)

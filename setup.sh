@@ -32,6 +32,7 @@ dnf_packages="
 	neofetch
 	nmap
 	obs-studio
+	powertop
 	python3-pip
 	rclone
 	steam
