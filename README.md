@@ -11,7 +11,6 @@ Script for installing and configuring a new Fedora install to my likings.
 ### DNF
 * [btop](https://github.com/aristocratos/btop)
 * [vscode](https://code.visualstudio.com/)
-* [discord](https://discord.com/)
 * [dotnet](https://dotnet.microsoft.com/)
 * [gcc](https://gcc.gnu.org/)
 * [gh](https://cli.github.com/)
@@ -34,6 +33,7 @@ Script for installing and configuring a new Fedora install to my likings.
 ### Flatpak
 * [Bitwarden](https://bitwarden.com/)
 * [Cryptomator](https://cryptomator.org/)
+* [Discord](https://discord.com/)
 * [Drawio](https://draw.io/)
 * [Obsidian](https://obsidian.md/)
 * [OnlyOffice](https://www.onlyoffice.com/)
@@ -41,7 +41,7 @@ Script for installing and configuring a new Fedora install to my likings.
 * [Spotify](https://spotify.com/)
 * [Ungoogled Chromium](https://github.com/ungoogled-software/ungoogled-chromium)
 
-### Others
+### Othersn
 * [7zip](https://www.7-zip.org/) - (official binary)
 * [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) - (official "installer")
 * [nvm](https://github.com/nvm-sh/nvm) - (official install script)

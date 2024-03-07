@@ -17,7 +17,6 @@ dnf_mirrors="
 dnf_packages="
 	btop
 	code
-	discord
 	dotnet-sdk-8.0
 	gcc
 	gh
@@ -72,6 +71,7 @@ flatpak_packages="
 	org.onlyoffice.desktopeditors
 	org.cryptomator.Cryptomator
 	md.obsidian.Obsidian
+	com.discordapp.Discord
 	com.spotify.Client
 	com.jgraph.drawio.desktop
 	com.github.Eloston.UngoogledChromium
