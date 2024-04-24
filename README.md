@@ -8,7 +8,7 @@ Script for installing and configuring a new Fedora install to my likings.
 (Likely works elsewhere too, but these are the ones I use)
 
 ## Usage:
-Run `sudo curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setup.sh | grep bash` in your terminal to download and run the script.
+Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setup.sh | sudo bash` in your terminal to download and run the script.
 
 ## Packages installed:
 ### DNF
