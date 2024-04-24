@@ -176,5 +176,5 @@ echo "Please reboot your system to apply all changes."
 
 if [ $exited_with_errors = true ]; then
 	# Set color to red, write info, then reset color
-	echo -e "\e[31mOError(s) occured during the installation process. Please check the output for more information.\e[0m"
+	echo -e "\e[31mError(s) occured during the installation process. Please check the output for more information.\e[0m"
 fi
