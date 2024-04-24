@@ -53,6 +53,7 @@ Run `sudo curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main
 * [oh-my-zsh](https://ohmyz.sh/) - (official install script)
 * [oh-my-posh](https://ohmyposh.dev/) - (official install script)
 * [antigen](https://antigen.sharats.me/) - (official install script)
+* [atomic](https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/atomic.omp.json) - oh my posh style
 
 ## Packages removed:
 * akregator

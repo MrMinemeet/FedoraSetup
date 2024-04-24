@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 source /usr/local/bin/antigen.zsh
-ZSH_THEME="robbyrussell"
 
 # Load oh-my-zsh lib
 antigen use oh-my-zsh
@@ -28,4 +27,4 @@ if [[ -e ~/.config/aliases ]]; then
 fi
 
 # TODO: Load Theme
-#eval "$(oh-my-posh init zsh --config ~/.config/themes/style.omp-json)"
+eval "$(oh-my-posh init zsh --config ~/.config/themes/atomic.omp.json)"

@@ -128,6 +128,11 @@ check_error
 flatpak install -y $flatpak_packages
 check_error
 
+# Get NerdFont for zsh themes
+wget -qO /tmp/CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CodeNewRoman.zip"
+unzip -f -d /home/$SUDO_USER/.local/share/fonts/ /tmp/CodeNewRoman.zip -x license.txt README.md
+rm /tmp/CodeNewRoman.zip
+
 # Install Zsh additions
 sudo -u $SUDO_USER sh -c "wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh -s -- --unattended" # Makes zsh nicer
 check_error
@@ -143,11 +148,12 @@ check_error
 # Get aliases from GitHub into .config/aliases
 curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/av/move_to_zsh/aliases > /home/$SUDO_USER/.config/aliases
 check_error
-# TODO: Get theme from GitHub into .config/themes/style_mrminemeet.omp-json
+# Get theme from GitHub into .config/themes/atomic.omp.json
+mkdir /home/$SUDO_USER/.config/themes
+curl -sL https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/atomic.omp.json > /home/$SUDO_USER/.config/themes/atomic.omp.json
 
 chsh -s $(which zsh) $SUDO_USER # Change shell to Zsh
 check_error
-
 
 # Install official 7zip binary
 curl https://raw.githubusercontent.com/MrMinemeet/Install7zz/main/install.sh | sudo bash
@@ -169,6 +175,7 @@ check_error
 # Info for user
 echo ""
 echo "Installation finished."
+echo "In order to make the fonts work, set 'ComicShannsMono Nerd Font Mono' in your terminal."
 echo "Please reboot your system to apply all changes."
 
 if [ $exited_with_errors = true ]; then
