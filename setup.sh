@@ -143,14 +143,14 @@ check_error
 curl -sL git.io/antigen > /usr/local/bin/antigen.zsh
 check_error
 # Get .zshrc from GitHub into .zshrc
-curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/av/move_to_zsh/.zshrc > /home/$SUDO_USER/.zshrc
+curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/.zshrc > /home/$SUDO_USER/.zshrc
 check_error
 # Get aliases from GitHub into .config/aliases
-curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/av/move_to_zsh/aliases > /home/$SUDO_USER/.config/aliases
+curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/aliases > /home/$SUDO_USER/.config/aliases
 check_error
 # Get theme from GitHub into .config/themes/atomic.omp.json
 mkdir /home/$SUDO_USER/.config/themes
-curl -sL https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/atomic.omp.json > /home/$SUDO_USER/.config/themes/atomic.omp.json
+curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/atomic.omp.json > /home/$SUDO_USER/.config/themes/atomic.omp.json
 
 chsh -s $(which zsh) $SUDO_USER # Change shell to Zsh
 check_error
