@@ -131,7 +131,7 @@ check_error
 # Get NerdFont for zsh themes
 wget -qO /tmp/CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CodeNewRoman.zip"
 mkdir -p /home/$SUDO_USER/.local/share/fonts/
-unzip -f -d /home/$SUDO_USER/.local/share/fonts/ /tmp/CodeNewRoman.zip -x license.txt README.md
+unzip -q /tmp/CodeNewRoman.zip -x README.md license.txt -d /home/$SUDO_USER/.local/share/fonts
 rm /tmp/CodeNewRoman.zip
 
 # Install Zsh additions
