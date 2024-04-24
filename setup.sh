@@ -172,7 +172,7 @@ check_error
 # Info for user
 echo ""
 echo "Installation finished."
-echo "In order to make the fonts work, set 'ComicShannsMono Nerd Font Mono' in your terminal."
+echo "In order to make the fonts work, set 'CodeNewRoman Nerd Font Mono' in your terminal."
 echo "Please reboot your system to apply all changes."
 
 if [ $exited_with_errors = true ]; then
