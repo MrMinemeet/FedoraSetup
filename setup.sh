@@ -35,6 +35,7 @@ dnf_packages="
 	python3-pip
 	rclone
 	steam
+	zsh
 "
 
 # DNF-Package to remove (includes Gnome and KDE Plasma stuff)
@@ -134,12 +135,23 @@ check_error
 flatpak install -y $flatpak_packages
 check_error
 
+# Install Zsh additions
+sudo -u $SUDO_USER sh -c "wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh -s -- --unattended" # Makes zsh nicer
+curl -s https://ohmyposh.dev/install.sh | bash -s # Makes zsh even nicer
+curl -sL git.io/antigen > /usr/local/bin/antigen.zsh # Package manager for Zsh
+# TODO: Get .zshrc from GitHub into .zshrc
+# TODO: Get aliases from GitHub into .config/aliases
+# TODO: Get theme from GitHub into .config/themes/style_mrminemeet.omp-json
+
+chsh -s $(which zsh) $SUDO_USER # Change shell to Zsh
+
+
 # Install official 7zip binary
 curl https://raw.githubusercontent.com/MrMinemeet/Install7zz/main/install.sh | sudo bash
 check_error
 
 # Install NVM
-sudo -u $SUDO_USER bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
+sudo -u $SUDO_USER zsh -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
 check_error
 
 # Install JetBrains Toolbox
@@ -148,11 +160,8 @@ wget -O - "https://data.services.jetbrains.com/products/download?platform=linux&
 rm -r /tmp/jetbrains*
 
 # Install Rust Toolchain via RustUp
-sudo -u $SUDO_USER bash -c 'wget -qO- https://sh.rustup.rs | sh -s -- -y'
+sudo -u $SUDO_USER zsh -c 'wget -qO- https://sh.rustup.rs | sh -s -- -y'
 check_error
-
-# Add alias to .bashrc
-echo -e $alias >> "/home/$SUDO_USER/.bashrc"
 
 # Info for user
 echo ""
