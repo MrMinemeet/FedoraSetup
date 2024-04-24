@@ -75,7 +75,7 @@ flatpak_packages="
 	com.discordapp.Discord
 	com.spotify.Client
 	com.jgraph.drawio.desktop
-	com.github.Eloston.UngoogledChromium
+	io.github.ungoogled_software.ungoogled_chromium
 "
 
 exited_with_errors=false
