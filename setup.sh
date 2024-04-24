@@ -78,13 +78,6 @@ flatpak_packages="
 	com.github.Eloston.UngoogledChromium
 "
 
-# Alias
-alias="
-	# Custom Alias\n
-	alias dur='sudo dnf upgrade --refresh -y && flatpak upgrade -y && flatpak remove --unused'\n
-	alias mergepdf='mutool merge ./*.pdf'\n
-"
-
 exited_with_errors=false
 check_error() {
     # Check the exit code
@@ -137,13 +130,23 @@ check_error
 
 # Install Zsh additions
 sudo -u $SUDO_USER sh -c "wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh -s -- --unattended" # Makes zsh nicer
-curl -s https://ohmyposh.dev/install.sh | bash -s # Makes zsh even nicer
-curl -sL git.io/antigen > /usr/local/bin/antigen.zsh # Package manager for Zsh
-# TODO: Get .zshrc from GitHub into .zshrc
-# TODO: Get aliases from GitHub into .config/aliases
+check_error
+# Makes zsh even nicer
+curl -s https://ohmyposh.dev/install.sh | bash -s
+check_error
+# Package manager for Zsh
+curl -sL git.io/antigen > /usr/local/bin/antigen.zsh
+check_error
+# Get .zshrc from GitHub into .zshrc
+curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/av/move_to_zsh/.zshrc > /home/$SUDO_USER/.zshrc
+check_error
+# Get aliases from GitHub into .config/aliases
+curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/av/move_to_zsh/aliases > /home/$SUDO_USER/.config/aliases
+check_error
 # TODO: Get theme from GitHub into .config/themes/style_mrminemeet.omp-json
 
 chsh -s $(which zsh) $SUDO_USER # Change shell to Zsh
+check_error
 
 
 # Install official 7zip binary
@@ -167,7 +170,6 @@ check_error
 echo ""
 echo "Installation finished."
 echo "Please reboot your system to apply all changes."
-
 
 if [ $exited_with_errors = true ]; then
 	# Set color to red, write info, then reset color
