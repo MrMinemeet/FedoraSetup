@@ -2,10 +2,13 @@
 Script for installing and configuring a new Fedora install to my likings.
 
 ## Used version:
-* Fedora 39 Gnome
-* Fedora 39 KDE
+* Fedora 40 Gnome
+* Fedora 40 KDE
 
 (Likely works elsewhere too, but these are the ones I use)
+
+## Usage:
+Run `sudo curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setup.sh | grep bash` in your terminal to download and run the script.
 
 ## Packages installed:
 ### DNF
@@ -29,6 +32,7 @@ Script for installing and configuring a new Fedora install to my likings.
 * [python3-pip](https://pip.pypa.io/)
 * [rclone](https://rclone.org/)
 * [steam](https://steampowered.com/)
+* [zsh](https://www.zsh.org/)
 
 ### Flatpak
 * [Bitwarden](https://bitwarden.com/)
@@ -41,11 +45,15 @@ Script for installing and configuring a new Fedora install to my likings.
 * [Spotify](https://spotify.com/)
 * [Ungoogled Chromium](https://github.com/ungoogled-software/ungoogled-chromium)
 
-### Othersn
+### Others
 * [7zip](https://www.7-zip.org/) - (official binary)
 * [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) - (official "installer")
 * [nvm](https://github.com/nvm-sh/nvm) - (official install script)
 * [RustUp](https://rustup.rs/) - (official install script)
+* [oh-my-zsh](https://ohmyz.sh/) - (official install script)
+* [oh-my-posh](https://ohmyposh.dev/) - (official install script)
+* [antigen](https://antigen.sharats.me/) - (official install script)
+* [atomic](https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/atomic.omp.json) - oh my posh style
 
 ## Packages removed:
 * akregator
@@ -73,7 +81,12 @@ Script for installing and configuring a new Fedora install to my likings.
 * yelp
 
 ## Alias:
-* `dur` - `sudo dnf upgrade --refresh -y && flatpak upgrade -y && flatpak remove --unused`
+* `dnfs` - `dnf search`
+* `dnfl` - `dnf list`
+* `dnfi` - `sudo dnf install`
+* `dnfr` - `sudo dnf remove`
+* `dnfu` - `sudo dnf upgrade`
+* `dur` - `dnfu --refresh -y && flatpak upgrade -y && flatpak remove --unused`
 * `mergepdf` - `mutool merge ./*.pdf`
 
 ## Configurations:
@@ -81,3 +94,4 @@ Script for installing and configuring a new Fedora install to my likings.
 * Disable `google-chrome` repository
 * Disable `phracek/PyCharm` COPR repository
 * Add `flathub.org` repository in addition to the default Fedora flatpak repository
+* Use `zsh` as default shell

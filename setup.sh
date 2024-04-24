@@ -35,6 +35,7 @@ dnf_packages="
 	python3-pip
 	rclone
 	steam
+	zsh
 "
 
 # DNF-Package to remove (includes Gnome and KDE Plasma stuff)
@@ -75,13 +76,6 @@ flatpak_packages="
 	com.spotify.Client
 	com.jgraph.drawio.desktop
 	com.github.Eloston.UngoogledChromium
-"
-
-# Alias
-alias="
-	# Custom Alias\n
-	alias dur='sudo dnf upgrade --refresh -y && flatpak upgrade -y && flatpak remove --unused'\n
-	alias mergepdf='mutool merge ./*.pdf'\n
 "
 
 exited_with_errors=false
@@ -134,12 +128,39 @@ check_error
 flatpak install -y $flatpak_packages
 check_error
 
+# Get NerdFont for zsh themes
+wget -qO /tmp/CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CodeNewRoman.zip"
+unzip -f -d /home/$SUDO_USER/.local/share/fonts/ /tmp/CodeNewRoman.zip -x license.txt README.md
+rm /tmp/CodeNewRoman.zip
+
+# Install Zsh additions
+sudo -u $SUDO_USER sh -c "wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh -s -- --unattended" # Makes zsh nicer
+check_error
+# Makes zsh even nicer
+curl -s https://ohmyposh.dev/install.sh | bash -s
+check_error
+# Package manager for Zsh
+curl -sL git.io/antigen > /usr/local/bin/antigen.zsh
+check_error
+# Get .zshrc from GitHub into .zshrc
+curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/av/move_to_zsh/.zshrc > /home/$SUDO_USER/.zshrc
+check_error
+# Get aliases from GitHub into .config/aliases
+curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/av/move_to_zsh/aliases > /home/$SUDO_USER/.config/aliases
+check_error
+# Get theme from GitHub into .config/themes/atomic.omp.json
+mkdir /home/$SUDO_USER/.config/themes
+curl -sL https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/atomic.omp.json > /home/$SUDO_USER/.config/themes/atomic.omp.json
+
+chsh -s $(which zsh) $SUDO_USER # Change shell to Zsh
+check_error
+
 # Install official 7zip binary
 curl https://raw.githubusercontent.com/MrMinemeet/Install7zz/main/install.sh | sudo bash
 check_error
 
 # Install NVM
-sudo -u $SUDO_USER bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
+sudo -u $SUDO_USER zsh -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
 check_error
 
 # Install JetBrains Toolbox
@@ -148,17 +169,14 @@ wget -O - "https://data.services.jetbrains.com/products/download?platform=linux&
 rm -r /tmp/jetbrains*
 
 # Install Rust Toolchain via RustUp
-sudo -u $SUDO_USER bash -c 'wget -qO- https://sh.rustup.rs | sh -s -- -y'
+sudo -u $SUDO_USER zsh -c 'wget -qO- https://sh.rustup.rs | sh -s -- -y'
 check_error
-
-# Add alias to .bashrc
-echo -e $alias >> "/home/$SUDO_USER/.bashrc"
 
 # Info for user
 echo ""
 echo "Installation finished."
+echo "In order to make the fonts work, set 'ComicShannsMono Nerd Font Mono' in your terminal."
 echo "Please reboot your system to apply all changes."
-
 
 if [ $exited_with_errors = true ]; then
 	# Set color to red, write info, then reset color
