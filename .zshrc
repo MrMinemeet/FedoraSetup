@@ -8,6 +8,11 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle command-not-found
 
+# NVM
+export NVM_LAZY_LOAD=true
+antigen bundle lukechilds/zsh-nvm
+
+# Others
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-history-substring-search
@@ -24,6 +29,11 @@ source $ZSH/oh-my-zsh.sh
 # Load custom alias file
 if [[ -e ~/.config/aliases ]]; then
         source ~/.config/aliases
+fi
+
+# Load nvm
+if [[ -e ~/.nvm/nvm.sh ]]; then
+        source ~/.nvm/nvm.sh
 fi
 
 # TODO: Load Theme

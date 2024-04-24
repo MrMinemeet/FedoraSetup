@@ -159,10 +159,6 @@ check_error
 curl https://raw.githubusercontent.com/MrMinemeet/Install7zz/main/install.sh | sudo bash
 check_error
 
-# Install NVM
-sudo -u $SUDO_USER zsh -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
-check_error
-
 # Install JetBrains Toolbox
 wget -O - "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA" | tar -xz -C /tmp/
 /tmp/jetbrains*/jetbrains-toolbox

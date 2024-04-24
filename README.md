@@ -48,12 +48,12 @@ Run `sudo curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main
 ### Others
 * [7zip](https://www.7-zip.org/) - (official binary)
 * [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) - (official "installer")
-* [nvm](https://github.com/nvm-sh/nvm) - (official install script)
+* [zsh-nvm](https://github.com/lukechilds/zsh-nvm) - (zsh plugin)
 * [RustUp](https://rustup.rs/) - (official install script)
 * [oh-my-zsh](https://ohmyz.sh/) - (official install script)
 * [oh-my-posh](https://ohmyposh.dev/) - (official install script)
 * [antigen](https://antigen.sharats.me/) - (official install script)
-* [atomic](https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/atomic.omp.json) - oh my posh style
+* [atomic](https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/atomic.omp.json) - (oh my posh style)
 
 ## Packages removed:
 * akregator
