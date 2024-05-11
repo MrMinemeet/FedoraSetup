@@ -28,7 +28,7 @@ dnf_packages="
 	mpv
 	mupdf
 	ncdu
-	neofetch
+	fastfetch
 	nmap
 	obs-studio
 	powertop

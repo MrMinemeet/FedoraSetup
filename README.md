@@ -25,7 +25,7 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [mpv](https://mpv.io/)
 * [mupdf](https://mupdf.com/)
 * [ncdu](https://dev.yorhel.nl/ncdu)
-* [neofetch](https://github.com/dylanaraps/neofetch)
+* [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 * [nmap](https://nmap.org/)
 * [obs-studio](https://obsproject.com/)
 * [powertop](https://01.org/powertop)
