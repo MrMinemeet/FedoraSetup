@@ -39,9 +39,9 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [Cryptomator](https://cryptomator.org/)
 * [Discord](https://discord.com/)
 * [Drawio](https://draw.io/)
-* [Obsidian](https://obsidian.md/)
 * [OnlyOffice](https://www.onlyoffice.com/)
 * [Signal](https://signal.org/)
+* [Standard Notes](https://standardnotes.com/)
 * [Spotify](https://spotify.com/)
 * [Ungoogled Chromium](https://github.com/ungoogled-software/ungoogled-chromium)
 

@@ -71,7 +71,7 @@ flatpak_packages="
 	org.signal.Signal
 	org.onlyoffice.desktopeditors
 	org.cryptomator.Cryptomator
-	md.obsidian.Obsidian
+	org.standardnotes.standardnotes
 	com.discordapp.Discord
 	com.spotify.Client
 	com.jgraph.drawio.desktop
