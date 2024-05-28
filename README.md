@@ -89,6 +89,7 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * `dur` - `dnfu --refresh -y && flatpak upgrade -y && flatpak remove --unused`
 * `mergepdf` - `mutool merge ./*.pdf`
 * `update-ohmyposh` - `curl -s https://ohmyposh.dev/install.sh | bash -s`
+* `coder` - `code -r`
 
 ## Configurations:
 * Install `rpmfusion` repositories and additionally enable `rpmfusion-free-steam`
