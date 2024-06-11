@@ -31,6 +31,11 @@ if [[ -e ~/.config/aliases ]]; then
         source ~/.config/aliases
 fi
 
+# Custom functions
+if [[ -e ~/.config/functions ]]; then
+        source ~/.config/functions
+fi
+
 # Load nvm
 if [[ -e ~/.nvm/nvm.sh ]]; then
         source ~/.nvm/nvm.sh

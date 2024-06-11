@@ -149,6 +149,9 @@ check_error
 # Get aliases from GitHub into .config/aliases
 curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/aliases > /home/$SUDO_USER/.config/aliases
 check_error
+# Get functions from GitHub into .config/functions
+curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/functions > /home/$SUDO_USER/.config/functions
+check_error
 # Get theme from GitHub into .config/themes/atomic.omp.json
 mkdir /home/$SUDO_USER/.config/themes
 curl -sL https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/atomic.omp.json > /home/$SUDO_USER/.config/themes/atomic.omp.json
