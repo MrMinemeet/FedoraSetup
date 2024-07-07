@@ -172,6 +172,16 @@ rm -r /tmp/jetbrains*
 sudo -u $SUDO_USER zsh -c 'wget -qO- https://sh.rustup.rs | sh -s -- -y'
 check_error
 
+# Add git alias
+git config --global alias.graph "log --graph --all --decorate"
+git config --global alias.jedi "push --force-with-lease"
+git config --global alias.pp "pull -p"
+git config --global alias.branches "branch -l"
+git config --global alias.staash "stash --all"
+
+# Core -> editor -> vscode
+git config --global core.editor "code --wait"
+
 # Info for user
 echo ""
 echo "Installation finished."
