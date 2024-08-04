@@ -76,6 +76,7 @@ flatpak_packages="
 	com.spotify.Client
 	com.jgraph.drawio.desktop
 	io.github.ungoogled_software.ungoogled_chromium
+	net.davidotek.pupgui2
 "
 
 exited_with_errors=false

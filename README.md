@@ -40,6 +40,7 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [Discord](https://discord.com/)
 * [Drawio](https://draw.io/)
 * [OnlyOffice](https://www.onlyoffice.com/)
+* [ProtonUp-Qt](https://github.com/DavidoTek/ProtonUp-Qt)
 * [Signal](https://signal.org/)
 * [Standard Notes](https://standardnotes.com/)
 * [Spotify](https://spotify.com/)
