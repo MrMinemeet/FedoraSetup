@@ -20,8 +20,6 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [gh](https://cli.github.com/)
 * [git](https://git-scm.com/)
 * [java-latest-openjdk](https://openjdk.java.net/)
-* [kdenlive](https://kdenlive.org/)
-* [krita](https://krita.org/)
 * [micro](https://micro-editor.github.io/)
 * [mpv](https://mpv.io/)
 * [mupdf](https://mupdf.com/)
@@ -35,16 +33,15 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [zsh](https://www.zsh.org/)
 
 ### Flatpak
-* [Bitwarden](https://bitwarden.com/)
 * [Cryptomator](https://cryptomator.org/)
 * [Discord](https://discord.com/)
 * [Drawio](https://draw.io/)
-* [OnlyOffice](https://www.onlyoffice.com/)
 * [ProtonUp-Qt](https://github.com/DavidoTek/ProtonUp-Qt)
 * [Signal](https://signal.org/)
 * [Standard Notes](https://standardnotes.com/)
 * [Spotify](https://spotify.com/)
-* [Ungoogled Chromium](https://github.com/ungoogled-software/ungoogled-chromium)
+* [Zed](https://zed.dev/)
+* [Zen](https://zen-browser.app/)
 
 ### Others
 * [7zip](https://www.7-zip.org/) - (official binary)

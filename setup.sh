@@ -1,4 +1,8 @@
 #!/bin/bash
+# This script is licensed under the MIT License.
+# The MIT License (MIT)
+# Copyright (c) 2024 MrMinemeet
+# See the LICENSE file for more information.
 
 # Check if script is run as root/with sudo
 if [ $(id -u) -ne 0 ]
@@ -22,8 +26,6 @@ dnf_packages="
 	gh
 	git
 	java-latest-openjdk
-	kdenlive
-	krita
 	micro
 	mpv
 	mupdf
@@ -67,16 +69,15 @@ dnf_remove_packages="
 
 # Flatpak-Pakages
 flatpak_packages="
-	com.bitwarden.desktop
 	org.signal.Signal
-	org.onlyoffice.desktopeditors
 	org.cryptomator.Cryptomator
 	org.standardnotes.standardnotes
 	com.discordapp.Discord
 	com.spotify.Client
 	com.jgraph.drawio.desktop
-	io.github.ungoogled_software.ungoogled_chromium
 	net.davidotek.pupgui2
+	dev.zed.Zed
+	io.github.zen_browser.zen
 "
 
 exited_with_errors=false
@@ -85,12 +86,9 @@ check_error() {
     if [ $? -ne 0 ]; then
         exited_with_errors=true
     fi
-} 
+}
 
-# Enable Flathub repository
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-check_error
-
+# ======================================================================================================================
 # Configure DNF
 echo "max_parallel_downloads=20" >> /etc/dnf/dnf.conf
 
@@ -125,10 +123,16 @@ check_error
 dnf install -y $dnf_packages
 check_error
 
+# ======================================================================================================================
+# Enable Flathub repository
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+check_error
+
 # Install flatpak packages
 flatpak install -y $flatpak_packages
 check_error
 
+# ======================================================================================================================
 # Get NerdFont for zsh themes
 wget -qO /tmp/CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CodeNewRoman.zip"
 mkdir -p /home/$SUDO_USER/.local/share/fonts/
@@ -138,21 +142,27 @@ rm /tmp/CodeNewRoman.zip
 # Install Zsh additions
 sudo -u $SUDO_USER sh -c "wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh -s -- --unattended" # Makes zsh nicer
 check_error
+
 # Makes zsh even nicer
 curl -s https://ohmyposh.dev/install.sh | bash -s
 check_error
+
 # Package manager for Zsh
 curl -sL git.io/antigen > /usr/local/bin/antigen.zsh
 check_error
+
 # Get .zshrc from GitHub into .zshrc
 curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/.zshrc > /home/$SUDO_USER/.zshrc
 check_error
+
 # Get aliases from GitHub into .config/aliases
 curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/aliases > /home/$SUDO_USER/.config/aliases
 check_error
+
 # Get functions from GitHub into .config/functions
 curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/functions > /home/$SUDO_USER/.config/functions
 check_error
+
 # Get theme from GitHub into .config/themes/atomic.omp.json
 mkdir /home/$SUDO_USER/.config/themes
 curl -sL https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/atomic.omp.json > /home/$SUDO_USER/.config/themes/atomic.omp.json
@@ -160,19 +170,23 @@ curl -sL https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes
 chsh -s $(which zsh) $SUDO_USER # Change shell to Zsh
 check_error
 
+# ======================================================================================================================
 # Install official 7zip binary
 curl https://raw.githubusercontent.com/MrMinemeet/Install7zz/main/install.sh | sudo bash
 check_error
 
+# ======================================================================================================================
 # Install JetBrains Toolbox
 wget -O - "https://data.services.jetbrains.com/products/download?platform=linux&code=TBA" | tar -xz -C /tmp/
 /tmp/jetbrains*/jetbrains-toolbox
 rm -r /tmp/jetbrains*
 
+# ======================================================================================================================
 # Install Rust Toolchain via RustUp
 sudo -u $SUDO_USER zsh -c 'wget -qO- https://sh.rustup.rs | sh -s -- -y'
 check_error
 
+# ======================================================================================================================
 # Add git alias
 git config --global alias.graph "log --graph --all --decorate"
 git config --global alias.jedi "push --force-with-lease"
@@ -183,6 +197,7 @@ git config --global alias.staash "stash --all"
 # Core -> editor -> vscode
 git config --global core.editor "code --wait"
 
+# ======================================================================================================================
 # Info for user
 echo ""
 echo "Installation finished."
