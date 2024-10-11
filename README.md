@@ -29,6 +29,7 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [powertop](https://01.org/powertop)
 * [python3-pip](https://pip.pypa.io/)
 * [rclone](https://rclone.org/)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [steam](https://steampowered.com/)
 * [zsh](https://www.zsh.org/)
 
@@ -81,17 +82,17 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 ## Alias:
 * `dnfs` - `dnf search`
 * `dnfl` - `dnf list`
-* `dnfi` - `sudo dnf install`
-* `dnfr` - `sudo dnf remove`
 * `dnfu` - `sudo dnf upgrade`
 * `dur` - `dnfu --refresh -y && flatpak upgrade -y && flatpak remove --unused`
 * `mergepdf` - `mutool merge ./*.pdf`
 * `update-ohmyposh` - `curl -s https://ohmyposh.dev/install.sh | bash -s`
 * `coder` - `code -r`
+* `gradlew` - `./gradlew`
 
 ## Configurations:
 * Install `rpmfusion` repositories and additionally enable `rpmfusion-free-steam`
 * Disable `google-chrome` repository
 * Disable `phracek/PyCharm` COPR repository
+* Add and enable [Terra](https://terra.fyralabs.com/) repository
 * Add `flathub.org` repository in addition to the default Fedora flatpak repository
 * Use `zsh` as default shell

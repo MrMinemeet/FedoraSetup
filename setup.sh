@@ -11,8 +11,8 @@ if [ $(id -u) -ne 0 ]
 fi
 
 
-# DNF-Repositories
-dnf_mirrors="
+# DNF-Repositories (Terra) is not added here, but further down below
+dnf_repositories="
 	https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 	https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 "
@@ -36,6 +36,7 @@ dnf_packages="
 	powertop
 	python3-pip
 	rclone
+	ripgrep
 	steam
 	zsh
 "
@@ -93,7 +94,7 @@ check_error() {
 echo "max_parallel_downloads=20" >> /etc/dnf/dnf.conf
 
 # Install DNF mirrors
-dnf install -y $dnf_mirrors
+dnf install -y $dnf_repositories
 check_error
 
 # VSCode
@@ -107,6 +108,9 @@ check_error
 dnf config-manager --disable google-chrome
 check_error
 sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+check_error
+# Terra-Repo
+sudo dnf install --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt='terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc' terra-release
 check_error
 dnf copr disable phracek/PyCharm
 check_error

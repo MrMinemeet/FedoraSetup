@@ -1,7 +1,5 @@
 alias dnfs='dnf search'
 alias dnfl='dnf list'
-alias dnfi='sudo dnf install'
-alias dnfr='sudo dnf remove'
 alias dnfu='sudo dnf upgrade'
 alias dur='dnfu --refresh -y && flatpak upgrade -y && flatpak remove --unused'
 alias mergepdf='mutool merge ./*.pdf'
