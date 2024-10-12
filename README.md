@@ -74,6 +74,7 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * kolourpaint
 * konversation
 * korganizer
+* merkuro
 * rhythmbox
 * simple-scan
 * totem

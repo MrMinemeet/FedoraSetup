@@ -62,6 +62,7 @@ dnf_remove_packages="
 	kolourpaint
 	konversation
 	korganizer
+	merkuro
 	rhythmbox
 	simple-scan
 	totem
