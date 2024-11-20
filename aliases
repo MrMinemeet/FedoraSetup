@@ -1,3 +1,4 @@
+alias gti='git'
 alias dnfs='dnf search'
 alias dnfl='dnf list'
 alias dnfu='sudo dnf upgrade'

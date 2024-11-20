@@ -198,6 +198,7 @@ git config --global alias.jedi "push --force-with-lease"
 git config --global alias.pp "pull -p"
 git config --global alias.branches "branch -l"
 git config --global alias.staash "stash --all"
+git config --global alias.staush "stash --include-untracked"
 
 # Core -> editor -> vscode
 git config --global core.editor "code --wait"
