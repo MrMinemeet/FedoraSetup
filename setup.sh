@@ -38,6 +38,7 @@ dnf_packages="
 	rclone
 	ripgrep
 	steam
+	syncthing
 	zsh
 "
 
@@ -73,9 +74,9 @@ dnf_remove_packages="
 flatpak_packages="
 	org.signal.Signal
 	org.cryptomator.Cryptomator
-	org.standardnotes.standardnotes
 	com.discordapp.Discord
 	com.spotify.Client
+	md.obsidian.Obsidian
 	com.jgraph.drawio.desktop
 	net.davidotek.pupgui2
 	dev.zed.Zed

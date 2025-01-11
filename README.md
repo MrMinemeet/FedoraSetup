@@ -31,15 +31,16 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [rclone](https://rclone.org/)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [steam](https://steampowered.com/)
+* [syncthing](https://syncthing.net/)
 * [zsh](https://www.zsh.org/)
 
 ### Flatpak
 * [Cryptomator](https://cryptomator.org/)
 * [Discord](https://discord.com/)
 * [Drawio](https://draw.io/)
+* [Obsidian](https://obsidian.md/)
 * [ProtonUp-Qt](https://github.com/DavidoTek/ProtonUp-Qt)
 * [Signal](https://signal.org/)
-* [Standard Notes](https://standardnotes.com/)
 * [Spotify](https://spotify.com/)
 * [Zed](https://zed.dev/)
 * [Zen](https://zen-browser.app/)
