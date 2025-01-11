@@ -82,8 +82,6 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * yelp
 
 ## Alias:
-* `dnfs` - `dnf search`
-* `dnfl` - `dnf list`
 * `dnfu` - `sudo dnf upgrade`
 * `dur` - `dnfu --refresh -y && flatpak upgrade -y && flatpak remove --unused`
 * `mergepdf` - `mutool merge ./*.pdf`
