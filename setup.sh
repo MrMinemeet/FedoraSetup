@@ -170,9 +170,10 @@ check_error
 curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/functions > /home/$SUDO_USER/.config/functions
 check_error
 
-# Get theme from GitHub into .config/themes/atomic.omp.json
+# Get theme from GitHub into .config/themes
+# This is a customized version of the "Atomic" theme by Jan De Dobbeleer
 mkdir /home/$SUDO_USER/.config/themes
-curl -sL https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/atomic.omp.json > /home/$SUDO_USER/.config/themes/atomic.omp.json
+curl -sL https://github.com/MrMinemeet/FedoraSetup/blob/main/atomic-custom.omp.json > /home/$SUDO_USER/.config/themes/atomic-custom.omp.json
 
 chsh -s $(which zsh) $SUDO_USER # Change shell to Zsh
 check_error

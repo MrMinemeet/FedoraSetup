@@ -55,6 +55,7 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [oh-my-posh](https://ohmyposh.dev/) - (official install script)
 * [antigen](https://antigen.sharats.me/) - (official install script)
 * [atomic](https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/atomic.omp.json) - (oh my posh style)
+	- Customized to only show current dir, git information (optionally) and execution time
 
 ## Packages removed:
 * akregator
