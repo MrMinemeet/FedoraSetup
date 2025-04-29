@@ -1,7 +1,7 @@
 #!/bin/bash
 # This script is licensed under the MIT License.
 # The MIT License (MIT)
-# Copyright (c) 2024 MrMinemeet
+# Copyright (c) 2024-2025 MrMinemeet
 # See the LICENSE file for more information.
 
 # Check if script is run as root/with sudo
@@ -21,13 +21,11 @@ dnf_repositories="
 dnf_packages="
 	btop
 	code
-	dotnet-sdk-8.0
 	gcc
 	gh
 	git
 	java-latest-openjdk
 	micro
-	mpv
 	mupdf
 	ncdu
 	fastfetch
@@ -94,7 +92,14 @@ check_error() {
 
 # ======================================================================================================================
 # Configure DNF
-echo "max_parallel_downloads=20" >> /etc/dnf/dnf.conf
+if [ -d "/etc/dnf/libdnf5.conf.d/" ]; then
+	# DNF 5
+    curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/dnf5.conf -o /etc/dnf/libdnf5.conf.d/20-fedorasetup.conf
+else
+	# Older DNF
+    echo "max_parallel_downloads=20" >> /etc/dnf/dnf.conf
+fi
+check_error
 
 # Install DNF mirrors
 dnf install -y $dnf_repositories
@@ -202,6 +207,8 @@ git config --global alias.pp "pull -p"
 git config --global alias.branches "branch -l"
 git config --global alias.staash "stash --all"
 git config --global alias.staush "stash --include-untracked"
+git config --global alias.co "checkout"
+git config --global alias.cb "checkout -b"
 
 # Core -> editor -> vscode
 git config --global core.editor "code --wait"
@@ -215,5 +222,5 @@ echo "Please reboot your system to apply all changes."
 
 if [ $exited_with_errors = true ]; then
 	# Set color to red, write info, then reset color
-	echo -e "\e[31mError(s) occured during the installation process. Please check the output for more information.\e[0m"
+	echo -e "\e[31mError(s) occurred during the installation process. Please check the output for more information.\e[0m"
 fi

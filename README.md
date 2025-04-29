@@ -1,9 +1,9 @@
 # FedoraSetup
 Script for installing and configuring a new Fedora install to my likings.
 
-## Used version:
-* Fedora 40 Gnome
-* Fedora 40 KDE
+## Targeted version:
+* Fedora 42 Gnome
+* Fedora 42 KDE
 
 (Likely works elsewhere too, but these are the ones I use)
 
@@ -14,14 +14,12 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 ### DNF
 * [btop](https://github.com/aristocratos/btop)
 * [vscode](https://code.visualstudio.com/)
-* [dotnet](https://dotnet.microsoft.com/)
 * [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 * [gcc](https://gcc.gnu.org/)
 * [gh](https://cli.github.com/)
 * [git](https://git-scm.com/)
 * [java-latest-openjdk](https://openjdk.java.net/)
 * [micro](https://micro-editor.github.io/)
-* [mpv](https://mpv.io/)
 * [mupdf](https://mupdf.com/)
 * [ncdu](https://dev.yorhel.nl/ncdu)
 * [nmap](https://nmap.org/)
