@@ -41,5 +41,5 @@ if [[ -e ~/.nvm/nvm.sh ]]; then
         source ~/.nvm/nvm.sh
 fi
 
-# TODO: Load Theme
-eval "$(oh-my-posh init zsh --config ~/.config/themes/atomic.omp.json)"
+# Load Theme
+eval "$(oh-my-posh init zsh --config ~/.config/themes/atomic-custom.omp.json)"
