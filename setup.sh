@@ -213,6 +213,25 @@ git config --global alias.cb "checkout -b"
 # Core -> editor -> vscode
 git config --global core.editor "code --wait"
 
+# Other configs
+git config --global init.defaultBranch main
+git config --global core.autocrlf input
+git config --global core.fsmonitor true
+git config --global core.untrackedCache true
+git config --global push.autoSetupRemote true
+git config --global commit.gpgsign true
+git config --global commit.verbose true
+git config --global tag.gpgSign true
+git config --global fetch.prune true
+git config --global fetch.pruneTags true
+git config --global fetch.all true
+git config --global help.autocorrect prompt
+git config --global rebase.autoSquash true
+git config --global rebase.autoStash true
+git config --global rebase.updateRefs true
+git config --global merge.conflictstyle zdiff3
+git config --global pull.rebase true
+
 # ======================================================================================================================
 # Info for user
 echo ""
