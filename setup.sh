@@ -22,6 +22,7 @@ dnf_packages="
 	btop
 	code
 	gcc
+	gcc-c++
 	gh
 	git
 	java-latest-openjdk

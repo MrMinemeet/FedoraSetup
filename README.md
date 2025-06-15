@@ -15,7 +15,7 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [btop](https://github.com/aristocratos/btop)
 * [vscode](https://code.visualstudio.com/)
 * [fastfetch](https://github.com/fastfetch-cli/fastfetch)
-* [gcc](https://gcc.gnu.org/)
+* [gcc](https://gcc.gnu.org/) and [gcc-c++](https://gcc.gnu.org/)
 * [gh](https://cli.github.com/)
 * [git](https://git-scm.com/)
 * [java-latest-openjdk](https://openjdk.java.net/)
