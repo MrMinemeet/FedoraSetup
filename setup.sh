@@ -76,7 +76,6 @@ flatpak_packages="
 	com.discordapp.Discord
 	com.spotify.Client
 	md.obsidian.Obsidian
-	com.jgraph.drawio.desktop
 	net.davidotek.pupgui2
 	org.videolan.VLC
 	io.github.zen_browser.zen

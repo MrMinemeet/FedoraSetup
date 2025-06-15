@@ -35,7 +35,6 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 ### Flatpak
 * [Cryptomator](https://cryptomator.org/)
 * [Discord](https://discord.com/)
-* [Drawio](https://draw.io/)
 * [Obsidian](https://obsidian.md/)
 * [ProtonUp-Qt](https://github.com/DavidoTek/ProtonUp-Qt)
 * [Signal](https://signal.org/)
