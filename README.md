@@ -41,7 +41,6 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [Signal](https://signal.org/)
 * [Spotify](https://spotify.com/)
 * [VLC](https://www.videolan.org/vlc/)
-* [Zed](https://zed.dev/)
 * [Zen](https://zen-browser.app/)
 
 ### Others

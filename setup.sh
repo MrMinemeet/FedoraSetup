@@ -79,7 +79,6 @@ flatpak_packages="
 	com.jgraph.drawio.desktop
 	net.davidotek.pupgui2
 	org.videolan.VLC
-	dev.zed.Zed
 	io.github.zen_browser.zen
 "
 
