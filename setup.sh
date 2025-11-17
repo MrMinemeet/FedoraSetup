@@ -72,7 +72,6 @@ dnf_remove_packages="
 # Flatpak-Pakages
 flatpak_packages="
 	org.signal.Signal
-	org.cryptomator.Cryptomator
 	com.discordapp.Discord
 	com.spotify.Client
 	md.obsidian.Obsidian
