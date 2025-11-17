@@ -35,7 +35,6 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 ### Flatpak
 * [Discord](https://discord.com/)
 * [Obsidian](https://obsidian.md/)
-* [ProtonUp-Qt](https://github.com/DavidoTek/ProtonUp-Qt)
 * [Signal](https://signal.org/)
 * [Spotify](https://spotify.com/)
 * [VLC](https://www.videolan.org/vlc/)
