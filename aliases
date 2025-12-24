@@ -1,7 +1,7 @@
 alias gti='git'
-alias dnfu='sudo dnf upgrade'
-alias dur='dnfu --refresh -y && flatpak upgrade -y && flatpak remove --unused'
+alias upg='sudo dnf upgrade --refresh -y && flatpak upgrade -y && flatpak remove --unused'
 alias mergepdf='mutool merge ./*.pdf'
 alias update-ohmyposh='curl -s https://ohmyposh.dev/install.sh | sudo bash -s'
 alias coder='code -r'
 alias gradlew="./gradlew"
+alias dcu="docker compose down && docker compose up"
