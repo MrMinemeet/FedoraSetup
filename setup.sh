@@ -1,7 +1,7 @@
 #!/bin/bash
 # This script is licensed under the MIT License.
 # The MIT License (MIT)
-# Copyright (c) 2024-2025 MrMinemeet
+# Copyright (c) 2024-2026 MrMinemeet
 # See the LICENSE file for more information.
 
 # Check if script is run as root/with sudo
@@ -73,7 +73,6 @@ dnf_remove_packages="
 flatpak_packages="
 	org.signal.Signal
 	com.discordapp.Discord
-	com.spotify.Client
 	md.obsidian.Obsidian
 	org.videolan.VLC
 	io.github.zen_browser.zen

@@ -36,7 +36,6 @@ Run `curl -sL https://raw.githubusercontent.com/MrMinemeet/FedoraSetup/main/setu
 * [Discord](https://discord.com/)
 * [Obsidian](https://obsidian.md/)
 * [Signal](https://signal.org/)
-* [Spotify](https://spotify.com/)
 * [VLC](https://www.videolan.org/vlc/)
 * [Zen](https://zen-browser.app/)
 
